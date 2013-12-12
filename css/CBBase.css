@@ -1,0 +1,758 @@
+/* College Board Base CSS. this is based on HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/* If you are using another library such as Bootstrap that already covers this,
+   use the CBBaseLite.css file instead. */
+
+/* v0.1 */
+
+/* ==========================================================================
+ * CHANGE LOG
+ *
+ * v0.1 - Josh Jeffryes 10/17/13
+ *
+ * ========================================================================== */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #333;
+    font-family: "UniversLt", Arial, sans-serif;
+}
+
+html {
+    font-size: 10px; /*set to make later calculations with ems easier */
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* simple responsive images */
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   Base skin classes
+   ========================================================================== */
+
+/* ====================[ block skin styles ] ====================*/
+
+*[class |= "box"] a {
+    color: inherit;
+}
+
+.box-1 {
+    background: #0c4f74;
+    padding: 10px;
+    color: #fff;
+}
+
+.box-1 a {
+    color:inherit;
+}
+
+.box-2 {
+    border: 0 none; /* clear any other borders */
+    border-bottom: 2px solid #efefef;
+    padding: 12px 16px;
+}
+
+.box-3 {
+    background: #eee;
+    padding: 16px;
+    position: relative;
+}
+
+.box-3:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0 36px 36px 0;
+    border-style: solid;
+    border-color: #dadada #fff; /*the second color must match the background*/
+}
+
+.box-3b {
+    background: #90a83c;
+    color: #fff;
+}
+
+.box-3b:before {
+    border-color: #819735 #fff;
+}
+
+.box-4 {
+    border: 0 none; /*clear any other borders*/
+    border-bottom: 8px solid #eee;
+    padding: 0 0 3px 0;
+}
+
+.box-5a {
+    background: #819735;
+    padding: 4px 4px 4px 16px;
+    float: left;
+    margin: 0 0 4px 0;
+}
+
+.box-5a + * {
+    clear: both;
+}
+
+
+.box-3 .box-5a,
+.box-3a .box-5a,
+.box-3b .box-5a {
+    margin-left: -15px;
+    margin-right: 24px; /* ensures it will not overlap the corner fold */
+}
+
+.box-shadow-1 {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4), 0 1px 0 rgba(0,0,0,0.6);
+}
+
+.nav-list {
+    display: table;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.nav-item a{
+    color: inherit;
+    font-size: inherit;
+}
+
+.modalHolder {
+    position: fixed;
+    top: 0; /*set in middle via JavaScript*/
+    left: 0;
+    width: 90%;
+    margin: 5%;
+    z-index: 100;
+    
+}
+
+.notice {
+    border: 2px solid #176fbb;
+    background: #fff;
+    margin: 0 0 10px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.notice-topBar {
+    background: #0d9bf7;
+    padding: 10px;
+    color: #fff;
+}
+
+.notice-topBar a {
+    color: inherit;
+}
+
+.notice-controls {
+    float: right;
+}
+
+.notice-body {
+    padding: 10px;
+}
+
+
+/* ====================[ text skin styles ] ====================*/
+
+/* Text skin styles follow block skin styles so they can override default text properties */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+}
+
+h1, .h1 {
+    font: normal 36px/38px "SerifaStdBold", Times, serif;
+    margin-bottom: 12px;
+}
+
+h1 i, h1 em, h1 .txt-emphasized, .h1 i, .h1 em, .h1 .txt-emphasized {
+    font: italic 36px/38px "SerifaStdBold", Times, serif;
+}
+
+h1 b, h1 stong, h1 .txt-strong, .h1 b, .h1 strong, .h1 .txt-strong {
+    font: normal 36px/38px "UniversLtBlack", Times, serif;
+}
+
+/* TODO: add bold and italic styles for other H tags */
+
+h2, .h2 {
+    font: normal 28px/30px "SerifaStdBold", Times, serif;
+    margin-bottom: 8px;
+}
+
+h3, .h3 {
+    font: normal 20px/22px "UniversLtBlack", Arial, sans-serif;
+    margin-bottom: 8px;
+}
+
+h4, .h4 {
+    font: normal 16px/18px "UniversLtBlack", Arial, sans-serif;
+    margin-bottom: 8px;
+}
+
+h5, .h5 {
+    font: normal 20px/22px "SerifaStdBold", Times, serif;
+    margin-bottom: 8px;
+}
+
+h6, .h6 {
+    font: normal 14px/16px "SerifaStdBold", Times, serif;
+    margin-bottom: 8px;
+}
+
+p, .txt-p {
+    font: normal 14px/16px "UniversLt", Arial, sans-serif;
+    margin: 0 0 16px 0;
+}
+
+.txt-p2 {
+    font: normal 16px/18px "UniversLt", Arial, sans-serif;
+}
+
+a, .txt-link {
+    font: normal 14px/16px "UniversLt", Arial, sans-serif;
+    color: #0d9af7;
+    text-decoration: none;
+}
+
+.txt-primary {
+    
+}
+
+.txt-secondary {
+    
+}
+
+.txt-tertiary {
+    
+}
+
+.txt-note {
+    font: normal 11px/12px "UniversLTBlack", Arial, sans-serif;
+    color: #333;
+}
+
+/* ====================[ icon skin styles ] ====================*/
+
+.icon-emphasized {
+    display: inline-block;
+    background: #0d9af7;
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+/* ====================[ table skin styles ] ====================*/
+
+/* because tables are a specific element with semantic meaning, they can have
+   an element based default styling. */
+
+table {
+    background: #efefef;
+}
+
+.table-wrapper {
+    background: #efefef;
+    padding: 10px;
+}
+
+th, td {
+    padding: 6px;
+}
+
+td {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+
+/* ==========================================================================
+   Base structure classes
+   ========================================================================== */
+
+/* columns and rows mostly based on Bootstrap 3 */
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+} 
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+    box-sizing: border-box;
+}
+
+.row:after {
+    clear: both;
+}
+
+*[class |= "col"] {
+    float: left;
+    position: relative;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+}
+
+.botMarg-1 {
+    margin-bottom: 20px;
+}
+
+.botMarg-2 {
+    margin-bottom: 40px;
+}
+
+
+.box {
+    display: block; /*should be used on divs, this is just in case you use it on other elements*/
+    overflow: auto; /*clears any internal floats*/
+}
+
+/* ==========================================================================
+ * Singletons. Put all styles that apply to only one thing here.
+ * Use this sparingly. Singletons should usually be IDs or HTML5 tags like header.
+ * ========================================================================== */
+header{
+    position: relative;
+    z-index: 3;
+}
+
+#main {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    max-width: 1024px;
+    position: relative;
+    z-index: 2;
+}
+
+#topBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+.carousel {
+    border: 1px solid #aaa;
+    position: relative;
+}
+
+.carousel-slide {
+    position: relative;
+}
+
+.carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.carousel-overlay h1,
+.carousel-overlay .h1 {
+    font-size: 20px;
+}
+
+.carousel-overlay h2,
+.carousel-overlay .h2 {
+    font-size: 16px;
+}
+
+.carousel-overlay p,
+.carousel-overlay .txt-p {
+    font-size: 12px;
+}
+
+.carousel-background {
+}
+
+.carousel > ul {
+    -webkit-transition: left 1s ease;   
+    transition: left 1s ease;  
+}
+
+.carousel-leftArrow,
+.carousel-rightArrow {
+    position: absolute;
+    top: 40%;
+    padding: 10px;
+    pointer-events: none;
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+.carousel-rightArrow {
+    right: 0;
+}
+
+.carousel-leftArrow .icon-chevron-left,
+.carousel-rightArrow .icon-chevron-right{
+    color: #fff;
+    font-size: 20px;
+}
+
+/* ==========================================================================
+   Responsive styles
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  *[class |= "col"] {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    .col-1 {
+      width: 8.333333333333332%;
+    }
+    
+    .col-2 {
+      width: 16.666666666666664%;
+    }
+    
+    .col-3 {
+      width: 25%;
+    }
+    
+    .col-4 {
+      width: 33.33333333333333%;
+    }
+    
+    .col-5 {
+      width: 41.66666666666667%;
+    }
+    
+    .col-6 {
+      width: 50%;
+    }
+    
+    .col-7 {
+      width: 58.333333333333336%;
+    }
+    
+    .col-8 {
+      width: 66.66666666666666%;
+    }
+    
+    .col-9 {
+      width: 75%;
+    }
+    
+    .col-10 {
+      width: 83.33333333333334%;
+    }
+    
+    .col-11 {
+      width: 91.66666666666666%;
+    }
+    
+    .col-12 {
+      width: 100%;
+    }
+
+    h1, .h1 {
+        font: normal 58px/60px "SerifaStdBold", Times, serif;
+    }
+    
+    h1 i, h1 em, h1 .txt-emphasized, .h1 i, .h1 em, .h1 .txt-emphasized {
+        font: italic 58px/60px "SerifaStdBold", Times, serif;
+    }
+    
+    h1 b, h1 stong, h1 .txt-strong, .h1 b, .h1 strong, .h1 .txt-strong {
+        font: normal 58px/60px "UniversLtBlack", Times, serif;
+    }
+    
+    /* TODO: add bold and italic styles for other H tags */
+    
+    h2, .h2 {
+        font: normal 35px/37px "SerifaStdBold", Times, serif;
+    }
+    
+    h3, .h3 {
+        font: normal 20px/22px "UniversLtBlack", Arial, sans-serif;
+    }
+    
+    h4, .h4 {
+        font: normal 16px/18px "UniversLtBlack", Arial, sans-serif;
+    }
+    
+    h5, .h5 {
+        font: normal 20px/22px "SerifaStdBold", Times, serif;
+    }
+    
+    h6, .h6 {
+        font: normal 14px/16px "SerifaStdBold", Times, serif;
+    }
+    
+    p, .txt-p {
+        font: normal 14px/16px "UniversLt", Arial, sans-serif;
+        margin: 0 0 16px 0;
+    }
+    
+    .txt-p2 {
+        font: normal 16px/18px "UniversLt", Arial, sans-serif;
+    }
+    
+    a, .txt-link {
+        font: normal 14px/16px "UniversLt", Arial, sans-serif;
+        color: #0d9af7;
+        text-decoration: none;
+    }
+    
+    .carousel-overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0,0,0,0.4);
+        width: 100%;
+        padding: 20px;
+        color: #fff;
+        box-sizing: border-box;
+    }
+    
+    .carousel-background {
+    }
+    
+    .carousel > ul {
+        -webkit-transition: left 1s ease;   
+        transition: left 1s ease;  
+    }
+    
+    .carousel-leftArrow,
+    .carousel-rightArrow {
+        position: absolute;
+        top: 40%;
+        padding: 20px;
+        pointer-events: none;
+    }
+    
+    .carousel-rightArrow {
+        right: 0;
+    }
+    
+    .carousel-leftArrow .icon-chevron-left,
+    .carousel-rightArrow .icon-chevron-right{
+        color: #fff;
+        font-size: 60px;
+    }
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

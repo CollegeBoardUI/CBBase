@@ -1,0 +1,259 @@
+/*---------- base styles ----------*/
+html {
+    font: 400 10px/12px 'Roboto', Arial, sans-serif;
+}
+
+body {
+    font-size: 1.5rem;
+    color: #222;
+    line-height: 120%;
+}
+
+.autoSize {
+    width: 100%;
+    height: auto;
+}
+
+/*---------- structure ----------*/
+
+section:before,
+section:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+section:after {
+    clear: both;
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.row {
+    width: 100%;
+}
+
+[class*="col"] {
+    float: left;
+}
+
+.col3{
+    width: 25%;
+}
+
+.col4 {
+    width: 33%;
+}
+
+.col6 {
+    width: 50%;
+}
+
+.col8 {
+    width: 66%;
+}
+
+.col9{
+    width: 75%;
+}
+
+.colInner {
+    margin: 0 3rem;
+}
+
+.col:first-child .colInner{
+    margin-left: 0;
+}
+
+.col:last-child .colInner {
+    margin-right: 0;
+}
+
+/*---------- skin ----------*/
+
+h1, .h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 105%;
+    margin: 0 0 2rem 0;
+}
+
+h2, .h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0 0 1rem 0;
+}
+
+h3, .h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0 0 1rem 0;
+}
+
+h4, .h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 120%;
+    margin: 0 0 1rem 0;
+}
+
+.group {
+    border-bottom: solid #ccc 1px;
+    margin-bottom: 1.5em;
+    padding: 1em;
+}
+
+.solid {
+    border: none;
+}
+
+.solid .color1 {
+    background-color: #aaa;
+}
+
+.solid .color2 {
+    background-color: #aaa;
+}
+
+.border1 {
+    
+}
+
+.border2 {
+    border-bottom: #777 4px solid;
+}
+
+.contrast {
+    background: #404040;
+    background: -webkit-gradient(
+     linear,
+     left top,
+     left bottom,
+     from(#404040),
+     to(#000000)
+     );
+    background: -moz-linear-gradient(
+     center top,
+     #404040 0%,
+     #000000 100%
+     );
+}
+
+
+/*---------- components ----------*/
+
+
+.carousel {
+    border: 1px grey dashed;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.carousel > ul {
+    /* only target the first descendant, so you can use lists inside slides */
+    /* an element is targeted, even though this is not very OOCSS, because this component requires
+      a specific structure for the JS to work */
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 0;
+    -webkit-transition: left 1s ease;   
+    transition: left 1s ease;  
+}
+
+.carousel > ul > li {
+    /* only target the first descendant, so you can use lists inside slides */
+    /* an element is targeted, even though this is not very OOCSS, because this component requires
+      a specific structure for the JS to work */
+    display: block;
+    float: left;
+}
+
+.carousel a {
+    display: block;
+}
+
+.carousel .slide {
+    border: 1px dashed grey;
+    padding: 1rem;
+}
+
+
+
+/*---------- unique ----------*/
+
+header {
+    margin-top: 150px;
+}
+
+nav {
+   height: 60px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+}
+
+#navBar {
+    float: right;
+}
+
+#navList {
+    list-style: none;
+    margin: 15px 1.5em 0 0; 
+}
+
+#navList > li {
+    display: block;
+    float: left;
+    margin: 0 0 20px 0;
+    width: 80px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#navList > li a {
+    text-decoration: none;
+    color: #555;
+}
+
+#navList > li .navLabel {
+    display: block;
+    border-radius: 500px; /*keep it round at most reasonable sizes*/
+    border: 4px #ddd solid;
+    background: blue;
+    color: #fff;
+    font-size: 1.5em;
+    width:1.75em;
+    height: 1.75em;
+    text-align: center;
+    line-height: 1.75em;
+    margin: 7px auto;
+    -webkit-box-shadow:  0.3rem 0.3rem 0.3rem  rgba(0, 0, 0, .4);
+    box-shadow:  0.3rem 0.3rem 0.3rem  rgba(0, 0, 0, .4);
+}
+
+#logo {
+    float: left;
+    margin: .8em 0 0 1.5em;
+}
+
+#portrait {
+    
+}
+
+footer {
+    height: 120px;
+}
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+

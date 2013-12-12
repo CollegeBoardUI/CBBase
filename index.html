@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+    This is the College Board Base HTML file. It should be used as the starting
+    point for all new projects.
+    [ Josh Jeffryes, 10/17/13 ]
+-->
+    
+    <head>
+        
+<!-- ====================[ META TAGS AND INFORMATION ]==================== -->
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        
+<!-- ====================[ STYLE SHEETS ]==================== -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/CBBase.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <!-- Load all project specific CSS files after normalize and CBBAse -->
+        <!-- Your core CSS file should be named "main.css" -->
+        <link rel="stylesheet" href="css/main.css">
+
+<!-- ====================[ PRE-LOADED JAVASCRIPT ]==================== -->
+<!-- Only place JavaScript files that must load before the rest of the page here -->
+<!-- If the Global Header is not already including the HTML5Shiv on your page,
+     it should be added here. https://github.com/aFarkas/html5shiv
+     Use the html5shiv-printshiv.js, as printing is almost always required. -->
+            
+    </head>
+    <body>
+        <!-- The Global Header should be inserted here. Always separate your page into the following HTML5 regions:
+        
+        <header>
+        <nav>
+        -- the nav should be a child of header for most sites. If the
+                 site has a sub navigation, use a nav tag for that also.
+        <main>
+        -- the main "body" of the site should be inside a main tag. Use it in
+           place of the container div.
+        <footer>
+        
+        -->
+        
+        <header>
+            <nav id="topBar" class="box box-1 box-shadow-1">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#">Some Link</a></li>
+                    <li class="nav-item"><a href="#">Some Other Link</a></li>
+                    <li class="nav-item"><a href="#">Some Third Link</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="main">
+            <!-- make sure the main section of the page has a clear heirarchy.
+                 
+                 Use the ID "main" on your main container. This helps with
+                 specificity, and makes any dependent selectors or jQuery
+                 more efficient.
+                 
+                 Your first H1 should appear inside the main tag. -->
+            <section class="botMarg-1">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="h1">This is a page title, it is an H1</h1>
+                        <p>All H tags should be followed immediately by an element with text in it, usually a paragraph tag. This will be interpretted as the content the H tag is describing.</p>
+                        <p>A second paragraph, or any other text in an element after the first, will not be closely coupled with the headline.</p>
+                        <span class="txt-p">This span is styled like a paragraph, but is still <strong>inline.</strong></span>
+                    </div>
+                </div>
+            </section>
+            <section class="botMarg-1">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>A Responsive, Accessible Carousel</h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="js-slidify carousel">
+                            <ul>
+                                <li><a href="#">
+                                    <div class="carousel-slide">
+                                        <div class="carousel-background">
+                                            <img src="img/slide01.jpg" />
+                                        </div>
+                                        <div class="carousel-overlay">
+                                            <p class="h2">Text inside carousels should not use H tags</p>
+                                            <p>But it can be styled as a headline.</p>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="carousel-slide">
+                                        <div class="carousel-background">
+                                            <img src="img/slide02.jpg" />
+                                        </div>
+                                        <div class="carousel-overlay">
+                                            <p class="h2">Text inside carousels should not use H tags</p>
+                                            <p>But it can be styled as a headline.</p>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="carousel-slide">
+                                        <div class="carousel-background">
+                                            <img src="img/slide03.jpg" />
+                                        </div>
+                                        <div class="carousel-overlay">
+                                            <p class="h2">Text inside carousels should not use H tags</p>
+                                            <p>But it can be styled as a headline.</p>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a href="#">
+                                    <div class="carousel-slide">
+                                        <div class="carousel-background">
+                                            <img src="img/slide04.jpg" />
+                                        </div>
+                                        <div class="carousel-overlay">
+                                            <p class="h2">Text inside carousels should not use H tags</p>
+                                            <p>But it can be styled as a headline.</p>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            </ul>
+                            <div class="carousel-leftArrow js-slidify-arrow"><i class="fa fa-chevron-left"></i></div>
+                            <div class="carousel-rightArrow js-slidify-arrow"><i class="fa fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="botMarg-1">
+                <div class="row botMarg-2">
+                    <div class="col-6">
+                        <h2>This is a H2</h2>
+                        <p class="h4">This paragraph is styled as a h4, but is actually a paragraph.</p>
+                        <p>This paragraph is styled as a normal paragraph. Lorem ipsum dolor sit amet, ex sit numquam theophrastus. Ex veri sententiae pri. Eos ne eros essent facilis, no quo clita dolorum salutandi. Mea maiorum iracundia adipiscing ea.</p>
+                        <img src="img/file4971273532045.jpg" />
+                    </div>
+                    <div class="col-6">
+                        <div class="box box-3">
+                            <h3>This is a H3</h3>
+                            <p>This box has a "paper fold" corner, which is created entirely in CSS.</p>
+                            <p>Eius brute saperet pro id, at adhuc error possim vim. Error maiorum suscipit cu vis, partem deserunt ad vel. Est ne evertitur intellegat. Te bonorum omittam sit. Ex ornatus singulis constituam vel, ne quas praesent sit. Vim odio omnes graecis cu.</p>
+                            <p>Vis exerci moderatius ea, nam case noster te, nam id clita oporteat dissentias. Eruditi assentior vel no, nec ea legendos sensibus omittantur. Cu labore quaeque expetenda sit. Vix ex idque harum ludus, per ad consul pericula. Ad nec utinam mediocritatem concludaturque, eum delenit assentior ut.</p>
+                        </div>
+                        <div class="box box-2">
+                            <h3 class="h5">This is an H3 styled as a H5</h3>
+                        </div>
+                        <div class="box box-2">
+                            <a href="#">This link should have a descriptive name</a>
+                        </div>
+                        <div class="box box-2">
+                            <a href="#"><i class="fa fa-calendar"></i> Link with icon base style</a>
+                        </div>
+                        <div class="box box-2">
+                            <a href="#"><i class="fa fa-envelope fa-emphasized"></i> Link with icon style 2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row botMarg-2">
+                    <div class="col-8">
+                        <h2 class="h3 box box-4 botMarg-1">This is a H2 Styled as a H3</h2>
+                        <p>An cetero ceteros vituperatoribus cum, nec blandit voluptatum in. Eam scripta euismod te, ei aeterno elaboraret vel. Sed ut sumo mollis. Detraxit efficiendi ut vix, at putent adolescens sadipscing vim. Sonet dicant scripta sit no, hinc harum vis ne.</p>
+                        <!--<h3 class="botMarg-1">An Example Accessible Table</h3>
+                        <div class="table-wrapper">
+                            <table>
+                                <caption>This is a caption explaining the purpose of the table for accessibility.</caption>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th id="name">Date</th>
+                                    <th id="age">Age</th>
+                                    <th id="birthday">Birthday</th>
+                                </tr>
+                                    
+                                <tr>
+                                    <th rowspan="2" id="birth">by birth</th>
+                                    <th id="jackie">Jackie</th>
+                                    <td headers="birth jackie age">5</td>
+                                    <td headers="birth jackie birthday">April 5</td>
+                                </tr>
+                                    
+                                <tr>
+                                    <th id="beth">Beth</th>
+                                    <td headers="birth beth age">8</td>
+                                    <td headers="birth beth birthday">January 14</td>
+                                </tr>
+                                    
+                                <tr>
+                                    <th id="step">by marriage</th>
+                                    <th id="jenny">Jenny</th>
+                                    <td headers ="step jenny age">12</td>
+                                    <td headers="step jenny birthday">Feb 12</td>
+                                </tr>
+                                
+                            </table>
+                        </div>-->
+                    </div>
+                    <div class="col-4">
+                        <div class="box box-3 box-3b">
+                            <h3 class="h6 box box-5a">This H3 tag is styled as a H6</h3>
+                            <p class="txt-note">A date or other note</p>
+                            <p class="txt-p2">Pri eu etiam dolore electram, cu sumo omittantur contentiones mei, munere aliquip id cum. Eam error mundi exerci no. Ex sit evertitur mediocritatem, eu nobis animal nostrud vim. Sumo facilisi et ius, ut vis doctus epicuri. Eum an doctus vidisse, movet salutandi mediocritatem vis et.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6"></div>
+                    <div class="col-3"></div>
+                </div>
+            </section>
+            
+        </div>
+        
+    <!-- ====================[ JavaScript ]==================== -->
+    <!--don't load jQuery if it is already loaded-->
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    
+    </body>
+</html>
